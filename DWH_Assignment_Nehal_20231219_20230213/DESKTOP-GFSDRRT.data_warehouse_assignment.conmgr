@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-GFSDRRT.data_warehouse_assignment"
+  DTS:DTSID="{F9B936A8-AA01-4E8E-B81D-1416358F9CA2}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-GFSDRRT;Initial Catalog=data_warehouse_assignment;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-DWH_Assignment_Nehal_20231219_20230213-{F9B936A8-AA01-4E8E-B81D-1416358F9CA2}DESKTOP-GFSDRRT.data_warehouse_assignment;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
