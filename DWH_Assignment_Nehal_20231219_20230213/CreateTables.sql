@@ -5,6 +5,12 @@
 -- Run this script in the target database BEFORE executing
 -- any SSIS package.
 --
+-- Prerequisites:
+--   Both databases listed below must already exist on the server
+--   before running this script. Create them if needed:
+--     CREATE DATABASE [data_warehouse_assignment];
+--     CREATE DATABASE [DWH_Assignment];
+--
 -- Databases used:
 --   data_warehouse_assignment  (Packages 1, 3, 4)
 --   DWH_Assignment             (Package 2 – Data Connection)

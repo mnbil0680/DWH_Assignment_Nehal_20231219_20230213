@@ -669,7 +669,7 @@ WHERE  (Is_Current = 1)</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE dbo.Campaign_Dim SET Is_Current = 0, Expiration_Date = GETDATE() WHERE Campaign_Key = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE dbo.Campaign_Dim SET Is_Current = 0, Expiration_Date = CAST(GETDATE() AS DATE) WHERE Campaign_Key = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
