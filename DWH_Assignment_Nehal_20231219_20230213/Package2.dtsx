@@ -87,15 +87,15 @@
                       cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="100"
-                      cachedName="Name"
-                      lineageId="Package\Data Flow Task\253:invalid" />
+                      cachedName="LKP_Name"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[LKP_Name]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Budget1]"
                       cachedDataType="numeric"
-                      cachedName="Budget"
+                      cachedName="LKP_Budget"
                       cachedPrecision="10"
                       cachedScale="2"
-                      lineageId="Package\Data Flow Task\255:invalid" />
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[LKP_Budget]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -115,7 +115,7 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]} != #{Package\Data Flow Task\253:invalid} || #{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Budget]} != #{Package\Data Flow Task\255:invalid}</property>
+                      name="Expression">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]} != #{Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[LKP_Name]} || #{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Budget]} != #{Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[LKP_Budget]}</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -131,34 +131,6 @@
                 </output>
                 <output
                   refId="Package\Data Flow Task\Conditional Split.Outputs[Unchanged_Records]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Unchanged_Records"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression"></property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">1</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[Unchanged_Records1]"
                   description="Default Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   name="Unchanged_Records"
@@ -285,7 +257,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Current_Name]"
-                      dataType="wstr"
+                      codePage="1256"
+                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="100"
@@ -509,6 +482,24 @@ WHERE  (Is_Current = 1)</property>
                 <input
                   refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
                   name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table to join this input column to."
+                          name="JoinToReferenceColumn">ID</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which to copy a value."
+                          name="CopyFromReferenceColumn"></property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -762,6 +753,8 @@ WHERE  (Is_Current = 1)</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Command 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Data Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[Data Connection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -904,7 +897,8 @@ WHERE  (Is_Current = 1)</property>
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Budget]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Current_Name]"
-                      cachedDataType="wstr"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
                       cachedLength="100"
                       cachedName="Current_Name"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Current_Name]"
@@ -1079,6 +1073,8 @@ WHERE  (Is_Current = 1)</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Data Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[Data Connection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
