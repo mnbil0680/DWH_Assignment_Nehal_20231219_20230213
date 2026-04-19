@@ -17,15 +17,15 @@
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{3BB2F89A-C700-47A7-95B1-155714C66993}"
-      DTS:ObjectName="DESKTOP-83PJKNF.DWH">
+      DTS:ObjectName="DESKTOP-GFSDRRT.data_warehouse_assignment">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-83PJKNF;Initial Catalog=DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{3BB2F89A-C700-47A7-95B1-155714C66993}DESKTOP-83PJKNF.DWH;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-GFSDRRT;Initial Catalog=data_warehouse_assignment;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{3BB2F89A-C700-47A7-95B1-155714C66993}DESKTOP-GFSDRRT.data_warehouse_assignment;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -376,8 +376,8 @@ where [refTable].[Device_ID] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -494,8 +494,8 @@ WHERE Device_ID = ? AND Active_Flag = 1</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -625,8 +625,8 @@ WHERE Device_ID = ? AND Active_Flag = 1</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -821,8 +821,8 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1006,8 +1006,8 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>

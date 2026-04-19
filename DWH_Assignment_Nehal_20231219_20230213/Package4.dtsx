@@ -17,15 +17,15 @@
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{9AAD95ED-CEA5-4821-AA17-60CA7A7D19D9}"
-      DTS:ObjectName="DESKTOP-83PJKNF.DWH">
+      DTS:ObjectName="DESKTOP-GFSDRRT.data_warehouse_assignment">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-83PJKNF;Initial Catalog=DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{9AAD95ED-CEA5-4821-AA17-60CA7A7D19D9}DESKTOP-83PJKNF.DWH;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-GFSDRRT;Initial Catalog=data_warehouse_assignment;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{9AAD95ED-CEA5-4821-AA17-60CA7A7D19D9}DESKTOP-GFSDRRT.data_warehouse_assignment;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -674,8 +674,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -848,8 +848,8 @@ AND NOT EXISTS (
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-83PJKNF.DWH]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GFSDRRT.data_warehouse_assignment]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
