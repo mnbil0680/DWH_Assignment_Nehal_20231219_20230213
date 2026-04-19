@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Initial Catalog=DWH_Assignment;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{28DDE1AA-D5D5-49E9-82A6-1A4C9EB455A4}Data Connection;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-GFSDRRT;Initial Catalog=DWH_Assignment;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{28DDE1AA-D5D5-49E9-82A6-1A4C9EB455A4}Data Connection;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -494,9 +494,9 @@ WHERE  (Is_Current = 1)</property>
                           description="Specifies the column in the reference table to join this input column to."
                           name="JoinToReferenceColumn">ID</property>
                         <property
-                          dataType="System.String"
+                          dataType="System.Null"
                           description="Specifies the column in the reference table from which to copy a value."
-                          name="CopyFromReferenceColumn"></property>
+                          name="CopyFromReferenceColumn" />
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -669,7 +669,7 @@ WHERE  (Is_Current = 1)</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE dbo.Campaign_Dim SET Is_Current = 0, Expiration_Date = CAST(GETDATE() AS DATE) WHERE Campaign_Key = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -744,7 +744,7 @@ WHERE  (Is_Current = 1)</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE dbo.Campaign_Dim SET Current_Name = ?, Current_Budget = ? WHERE ID = ? AND Is_Current = 1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1030,7 +1030,7 @@ WHERE  (Is_Current = 1)</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[dbo].[Campaign_Dim]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
