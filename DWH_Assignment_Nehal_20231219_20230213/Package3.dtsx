@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="4/18/2026 3:59:39 AM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package3"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{977589F5-2D34-4689-8497-66A37222A8B2}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{84CAF545-A988-4FD8-93A9-66C6664379EA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -124,7 +124,7 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Device_ID]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="Device_ID"
@@ -142,7 +142,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Device_ID]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -320,13 +320,23 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Device_Status_Target]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    Device_ID,
+    MAX(Version_No) + 1 AS Version_No
+FROM dbo.Device_Status_Target
+WHERE CAST(Insert_Date AS DATE) = CAST(GETDATE() AS DATE)
+GROUP BY Device_ID</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Device_Status_Target]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT 
+    Device_ID,
+    MAX(Version_No) + 1 AS Version_No
+FROM dbo.Device_Status_Target
+WHERE CAST(Insert_Date AS DATE) = CAST(GETDATE() AS DATE)
+GROUP BY Device_ID) [refTable]
 where [refTable].[Device_ID] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -358,7 +368,7 @@ where [refTable].[Device_ID] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Device_Key" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Device_ID" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Device_Type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Status" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Insert_Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Active_Flag" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Version_No" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Device_ID" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="Version_No" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -388,7 +398,7 @@ where [refTable].[Device_ID] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input].Columns[Device_ID]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="Device_ID"
@@ -489,7 +499,7 @@ WHERE Device_ID = ? AND Active_Flag = 1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1256</property>
               </properties>
               <connections>
                 <connection
@@ -509,7 +519,7 @@ WHERE Device_ID = ? AND Active_Flag = 1</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[Device_ID]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="Device_ID"
@@ -520,7 +530,7 @@ WHERE Device_ID = ? AND Active_Flag = 1</property>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="10"
                       name="Param_0">
@@ -640,7 +650,7 @@ WHERE Device_ID = ? AND Active_Flag = 1</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Device_ID]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="Device_ID"
@@ -648,7 +658,7 @@ WHERE Device_ID = ? AND Active_Flag = 1</property>
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Device_ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Device_Type]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Device_Type"
@@ -656,7 +666,7 @@ WHERE Device_ID = ? AND Active_Flag = 1</property>
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Device_Type]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Location]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Location"
@@ -664,7 +674,7 @@ WHERE Device_ID = ? AND Active_Flag = 1</property>
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Status]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Status"
@@ -836,7 +846,7 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Device_ID]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="Device_ID"
@@ -844,7 +854,7 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Device_ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Device_Type]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Device_Type"
@@ -852,7 +862,7 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Device_Type]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Location]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Location"
@@ -860,7 +870,7 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Status]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1256"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Status"
@@ -883,7 +893,7 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                       cachedDataType="i4"
                       cachedName="Version_No"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Version_No]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Version_No]" />
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[Version_No]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -893,25 +903,25 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                       name="Device_Key" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Device_ID]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="10"
                       name="Device_ID" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Device_Type]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="50"
                       name="Device_Type" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="50"
                       name="Location" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="50"
                       name="Status" />
@@ -1018,7 +1028,7 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Device_ID]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1029,7 +1039,7 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Device_Type]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1040,7 +1050,7 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1051,7 +1061,7 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1074,25 +1084,25 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Device_ID]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="10"
                       name="Device_ID" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Device_Type]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="50"
                       name="Device_Type" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Location]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="50"
                       name="Location" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Status]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="50"
                       name="Status" />
@@ -1109,28 +1119,28 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Device_ID]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="10"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Device_ID]"
                       name="Device_ID" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Device_Type]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Device_Type]"
                       name="Device_Type" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Location]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Location]"
                       name="Location" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Status]"
-                      codePage="1252"
+                      codePage="1256"
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Status]"
@@ -1219,33 +1229,33 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Data Flow Task\OLE DB Command"
-          TopLeft="694.04758112653,464.285711057129" />
+          Size="152,41.6"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="471.666640895937,21.6666665159994" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="411.904739399279,328.095235813705" />
         <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Data Flow Task\Lookup"
-          TopLeft="490.952354127927,217.780950866531" />
-        <NodeLayout
           Size="152.8,41.6"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="472.999974456928,116.433332561917" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\Data Flow Task\Lookup"
+          TopLeft="490.952354127927,217.780950866531" />
         <NodeLayout
           Size="180,61.6"
           Id="Package\Data Flow Task\OLE DB Destination 1"
           TopLeft="401.190454270396,406.095235271303" />
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="471.666640895937,21.6666665159994" />
-        <NodeLayout
           Size="156,41.6"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="635.71425098039,310.761902600905" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Data Flow Task\OLE DB Command"
+          TopLeft="694.04758112653,464.285711057129" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="548.533307676433,63.2666665159994">
@@ -1260,40 +1270,6 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,45.6666660459175" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Command Output]"
-          TopLeft="694.04758112653,485.085711057129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-112.857126856134,-48.1904757858267"
-              Start="0,0"
-              End="-105.357126856134,-48.1904757858267">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-52.4285634280672,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-52.4285634280672,0"
-                    Point2="-56.4285634280672,0"
-                    Point3="-56.4285634280672,-4" />
-                  <mssgle:LineSegment
-                    End="-56.4285634280672,-44.1904757858267" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-56.4285634280672,-44.1904757858267"
-                    Point2="-56.4285634280672,-48.1904757858267"
-                    Point3="-60.4285634280672,-48.1904757858267" />
-                  <mssgle:LineSegment
-                    End="-105.357126856134,-48.1904757858267" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1339,42 +1315,6 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="564.819020794594,259.380950866531">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="148.895230185797,51.3809517343744"
-              Start="0,0"
-              End="148.895230185797,43.8809517343744">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.9835495194927" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.9835495194927"
-                    Point2="0,20.9835495194927"
-                    Point3="4,20.9835495194927" />
-                  <mssgle:LineSegment
-                    End="144.895230185797,20.9835495194927" />
-                  <mssgle:CubicBezierSegment
-                    Point1="144.895230185797,20.9835495194927"
-                    Point2="148.895230185797,20.9835495194927"
-                    Point3="148.895230185797,24.9835495194927" />
-                  <mssgle:LineSegment
-                    End="148.895230185797,43.8809517343744" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="26.2562283741485,25.9835495194927,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="548.376164292427,158.033332561917">
           <EdgeLayout.Curve>
@@ -1402,32 +1342,102 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="63.9333301461402,111.923808456224"
+              EndConnector="62.7333301461399,111.923808456224"
               Start="0,0"
-              End="63.9333301461402,104.423808456224">
+              End="62.7333301461399,104.423808456224">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.9619042281121" />
+                    End="0,51.961904228112" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,51.9619042281121"
-                    Point2="0,55.9619042281121"
-                    Point3="4,55.9619042281121" />
+                    Point1="0,51.961904228112"
+                    Point2="0,55.961904228112"
+                    Point3="4,55.961904228112" />
                   <mssgle:LineSegment
-                    End="59.9333301461402,55.9619042281121" />
+                    End="58.7333301461399,55.961904228112" />
                   <mssgle:CubicBezierSegment
-                    Point1="59.9333301461402,55.9619042281121"
-                    Point2="63.9333301461402,55.9619042281121"
-                    Point3="63.9333301461402,59.9619042281121" />
+                    Point1="58.7333301461399,55.961904228112"
+                    Point2="62.7333301461399,55.961904228112"
+                    Point3="62.7333301461399,59.961904228112" />
                   <mssgle:LineSegment
-                    End="63.9333301461402,104.423808456224" />
+                    End="62.7333301461399,104.423808456224" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Command Output]"
+          TopLeft="694.04758112653,485.085711057129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-112.857126856134,-48.190475785826"
+              Start="0,0"
+              End="-105.357126856134,-48.190475785826">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-52.428563428067,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-52.428563428067,0"
+                    Point2="-56.428563428067,0"
+                    Point3="-56.428563428067,-4" />
+                  <mssgle:LineSegment
+                    End="-56.428563428067,-44.190475785826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-56.428563428067,-44.190475785826"
+                    Point2="-56.428563428067,-48.190475785826"
+                    Point3="-60.428563428067,-48.190475785826" />
+                  <mssgle:LineSegment
+                    End="-105.357126856134,-48.190475785826" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="564.819020794594,259.380950866531">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="148.895230185796,51.380951734374"
+              Start="0,0"
+              End="148.895230185796,43.880951734374">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.9835495194926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.9835495194926"
+                    Point2="0,20.9835495194926"
+                    Point3="4,20.9835495194926" />
+                  <mssgle:LineSegment
+                    End="144.895230185796,20.9835495194926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="144.895230185796,20.9835495194926"
+                    Point2="148.895230185796,20.9835495194926"
+                    Point3="148.895230185796,24.9835495194926" />
+                  <mssgle:LineSegment
+                    End="148.895230185796,43.880951734374" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="26.2562283741482,25.9835495194926,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1465,17 +1475,17 @@ ISNULL((SELECT MAX(Version_No) FROM Device_Status_Target WHERE Device_ID = ?), 0
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Device_Status_Target]</Value>
+          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

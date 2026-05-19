@@ -19,24 +19,6 @@
 USE [data_warehouse_assignment];
 GO
 
--- ----------------------------------------------------------
--- Package 1 – Air Quality ETL
--- Source : Flat File / REST API
--- ----------------------------------------------------------
-IF OBJECT_ID('[dbo].[air_quality_Q1]', 'U') IS NULL
-BEGIN
-    CREATE TABLE [dbo].[air_quality_Q1] (
-        [id]        INT            IDENTITY(1,1) NOT NULL,
-        [sensor_id] VARCHAR(50)    NOT NULL,
-        [city]      VARCHAR(100)   NOT NULL,
-        [timestamp] DATETIME       NOT NULL,
-        [pm25]      FLOAT          NULL,
-        [pm10]      FLOAT          NULL,
-        [source]    VARCHAR(20)    NULL,
-        CONSTRAINT [PK_air_quality_Q1] PRIMARY KEY CLUSTERED ([id] ASC)
-    );
-END;
-GO
 
 -- ----------------------------------------------------------
 -- Package 3 – Device Status SCD Type 2
@@ -105,43 +87,4 @@ BEGIN
 END;
 GO
 
--- ----------------------------------------------------------
--- Package 2 – Campaign SCD Type 2
--- These objects live in the DWH_Assignment database.
--- ----------------------------------------------------------
-USE [DWH_Assignment];
-GO
 
--- Source / staging table
-IF OBJECT_ID('[dbo].[Campaign_Q2]', 'U') IS NULL
-BEGIN
-    CREATE TABLE [dbo].[Campaign_Q2] (
-        [ID]          INT             NOT NULL,
-        [Name]        NVARCHAR(100)   NOT NULL,
-        [Budget]      DECIMAL(10,2)   NOT NULL,
-        [Update_Date] DATE            NOT NULL,
-        CONSTRAINT [PK_Campaign_Q2] PRIMARY KEY CLUSTERED ([ID] ASC)
-    );
-END;
-GO
-
--- Dimension table (SCD Type 2)
-IF OBJECT_ID('[dbo].[Campaign_Dim]', 'U') IS NULL
-BEGIN
-    CREATE TABLE [dbo].[Campaign_Dim] (
-        [Campaign_Key]    INT             IDENTITY(1,1) NOT NULL,
-        [ID]              INT             NOT NULL,
-        [Name]            NVARCHAR(100)   NOT NULL,
-        [Budget]          DECIMAL(10,2)   NOT NULL,
-        [Current_Name]    NVARCHAR(100)   NULL,
-        [Current_Budget]  DECIMAL(10,2)   NULL,
-        [Effective_Date]  DATE            NOT NULL,
-        [Expiration_Date] DATE            NULL,
-        [Is_Current]      BIT             NOT NULL DEFAULT 1,
-        [Created_Date]    DATE            NOT NULL DEFAULT CAST(GETDATE() AS DATE),
-        CONSTRAINT [PK_Campaign_Dim] PRIMARY KEY CLUSTERED ([Campaign_Key] ASC)
-    );
-    CREATE INDEX [IX_Campaign_Dim_ID_IsCurrent]
-        ON [dbo].[Campaign_Dim] ([ID], [Is_Current]);
-END;
-GO

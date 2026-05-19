@@ -11,15 +11,15 @@
   DTS:LocaleID="3073"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{3E675EBE-BA22-4B13-9FC1-7211DA6AE7F6}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{ED2677D7-7385-4BEC-BFDE-1CA18249185C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{FC507A89-1766-4599-B618-632D2040148D}"
+      DTS:DTSID="{569FCA6F-B7F3-46CA-8DF3-BDB723D2F291}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="sensor_id"
-              DTS:DTSID="{48166B66-D216-438D-AB1F-770F7E3EB91D}"
+              DTS:DTSID="{B7F1A066-AF15-4094-AC2B-0107AB781890}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{48B6BEAD-1EDB-46F4-9AB0-754088B93344}"
+              DTS:DTSID="{093C659E-DBE3-458A-9BAB-FFDBF7784A3E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="measurement_time"
-              DTS:DTSID="{935EFBCF-99AF-4D7C-8A92-B353FB5C5E76}"
+              DTS:DTSID="{BA836A82-8E5F-4DD9-9B44-79D7C0F68393}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pm_25"
-              DTS:DTSID="{8254D65D-0ABC-4A76-8F8D-3FDB71E11C49}"
+              DTS:DTSID="{CE2390A0-FE45-4E46-87E8-DCE71471F58C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pm_10"
-              DTS:DTSID="{85EF5BEE-DA44-4CF8-9C06-DC5D4440F927}"
+              DTS:DTSID="{681072C6-07F5-4F9F-B524-166E658D270B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,81 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="unit"
-              DTS:DTSID="{D060262F-F0EF-4BDE-82BD-757039D4E670}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{F036C37B-D745-4380-B015-FF8E6BD2C022}"
-      DTS:ObjectName="Flat File Connection Manager 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="3073"
-          DTS:HeaderRowDelimiter="_x002C_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1256"
-          DTS:ConnectionString="C:\Users\Mohamed Nabil\source\repos\AirQuality_Integration\Air_Quality.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="sensor_id"
-              DTS:DTSID="{F3CA87D2-18BF-4107-B678-734559740AB8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="city"
-              DTS:DTSID="{84340FA6-D895-4DE7-ACED-D6CA97C7B10A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="measurement_time"
-              DTS:DTSID="{01CACC34-7730-4C69-BA94-EEF2707C4C73}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="pm_25"
-              DTS:DTSID="{A9D23982-822E-45A4-8B91-AD17150C6CC3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="pm_10"
-              DTS:DTSID="{E4D443AF-5515-4DD9-9013-B6F86F3E3236}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="unit"
-              DTS:DTSID="{907769B0-DF28-4600-9D7B-F3D3B58C3CA7}"
+              DTS:DTSID="{21C373AE-5ACF-4E6C-BA17-EBC50B5FABFA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -182,6 +108,224 @@
           version="1">
           <components>
             <component
+              refId="Package\Data Flow Task\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[StationID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="StationID"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[Record].Columns[StationID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="City"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[Record].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[PM25]"
+                      cachedDataType="i2"
+                      cachedName="PM25"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[Record].Columns[PM25]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[PM10]"
+                      cachedDataType="ui2"
+                      cachedName="PM10"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[Record].Columns[PM10]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Valid Row]"
+                  description="Output 5 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Valid Row"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\Data Flow Task\XML Source.Outputs[Record].Columns[StationID]}) &amp;&amp; #{Package\Data Flow Task\XML Source.Outputs[Record].Columns[StationID]} != "" &amp;&amp; ![ISNULL](#{Package\Data Flow Task\XML Source.Outputs[Record].Columns[City]}) &amp;&amp; #{Package\Data Flow Task\XML Source.Outputs[Record].Columns[City]} != "" &amp;&amp; ![ISNULL](#{Package\Data Flow Task\XML Source.Outputs[Record].Columns[PM25]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task\XML Source.Outputs[Record].Columns[PM10]}) &amp;&amp; #{Package\Data Flow Task\XML Source.Outputs[Record].Columns[PM25]} &gt;= 0 &amp;&amp; #{Package\Data Flow Task\XML Source.Outputs[Record].Columns[PM10]} &gt;= 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(StationID) &amp;&amp; StationID != "" &amp;&amp; !ISNULL(City) &amp;&amp; City != "" &amp;&amp; !ISNULL(PM25) &amp;&amp; !ISNULL(PM10) &amp;&amp; PM25 &gt;= 0 &amp;&amp; PM10 &gt;= 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[invalid row]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="invalid row"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Conditional Split 1"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input].Columns[sensor_id]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="sensor_id"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[sensor_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input].Columns[city]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="city"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input].Columns[pm25]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="pm25"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[pm25]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input].Columns[pm10]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="pm10"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[pm10]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split 1.Outputs[Valid Row]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Valid Row"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[sensor_id]}) &amp;&amp; #{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[sensor_id]} != "" &amp;&amp; ![ISNULL](#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[city]}) &amp;&amp; #{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[city]} != "" &amp;&amp; ![ISNULL]((DT_R8)#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[pm25]}) &amp;&amp; ![ISNULL]((DT_R8)#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[pm10]}) &amp;&amp; (DT_R8)#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[pm25]} &gt;= 0 &amp;&amp; (DT_R8)#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[pm10]} &gt;= 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(sensor_id) &amp;&amp; sensor_id != "" &amp;&amp; !ISNULL(city) &amp;&amp; city != "" &amp;&amp; !ISNULL((DT_R8)pm25) &amp;&amp; !ISNULL((DT_R8)pm10) &amp;&amp; (DT_R8)pm25 &gt;= 0 &amp;&amp; (DT_R8)pm10 &gt;= 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\CSV File"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -194,7 +338,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
+                  name="RetainNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
@@ -2005,14 +2149,13 @@ public class Variables
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[#region Namespaces
-//using Microsoft.SqlServer.Dts.Pipeline.ScriptComponent;
 using Microsoft.SqlServer.Dts.Runtime.Wrapper;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Net;
-using System.Web.Script.Serialization;  // For JavaScriptSerializer
+using System.Web.Script.Serialization;
 #endregion
 
 [Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
@@ -2022,10 +2165,10 @@ public class ScriptMain : UserComponent
     {
         try
         {
-            // FIX 1: Enable TLS 1.2 (MUST BE FIRST!)
+            // Enable TLS 1.2
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
-            // FIX 2: Remove the space at the end of the URL!
+            // REST API URL
             string url = "https://69be08c917c3d7d977910f4e.mockapi.io/us_air_quality/air_monitoring";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
@@ -2038,44 +2181,141 @@ public class ScriptMain : UserComponent
 
                 JavaScriptSerializer serializer = new JavaScriptSerializer();
 
-                // Deserialize into dynamic list
+                // Deserialize JSON
                 var data = serializer.Deserialize<List<Dictionary<string, object>>>(json);
 
                 foreach (var item in data)
                 {
+                    // =========================
+                    // Check NULL values
+                    // =========================
+
+                    if (
+                        item["id"] == null ||
+                        item["location"] == null ||
+                        item["timestamp"] == null ||
+                        item["pm25"] == null ||
+                        item["pm10"] == null
+                    )
+                    {
+                        continue; // Skip invalid row
+                    }
+
+                    // =========================
+                    // Read values safely
+                    // =========================
+
+                    string rawId = item["id"].ToString();
+                    string city = item["location"].ToString();
+                    string timestampStr = item["timestamp"].ToString();
+
+                    // =========================
+                    // Validate empty strings
+                    // =========================
+
+                    if (
+                        string.IsNullOrWhiteSpace(rawId) ||
+                        string.IsNullOrWhiteSpace(city) ||
+                        string.IsNullOrWhiteSpace(timestampStr)
+                    )
+                    {
+                        continue;
+                    }
+
+                    // =========================
+                    // Keep sensor ID as-is
+                    // Example: "U112" stays "U112"
+                    // =========================
+
+                    string sensorId = rawId;
+
+                    // =========================
+                    // Convert timestamp safely
+                    // =========================
+
+                    DateTime parsedTimestamp;
+
+                    if (!DateTime.TryParse(timestampStr, out parsedTimestamp))
+                    {
+                        continue;
+                    }
+
+                    // =========================
+                    // Convert pm25 safely
+                    // =========================
+
+                    double pm25;
+
+                    if (!double.TryParse(item["pm25"].ToString(), out pm25))
+                    {
+                        continue;
+                    }
+
+                    // =========================
+                    // Convert pm10 safely
+                    // =========================
+
+                    double pm10;
+
+                    if (!double.TryParse(item["pm10"].ToString(), out pm10))
+                    {
+                        continue;
+                    }
+
+                    // =========================
+                    // Skip negative pollution values
+                    // =========================
+
+                    if (pm25 < 0 || pm10 < 0)
+                    {
+                        continue;
+                    }
+
+                    // =========================
+                    // Add VALID row only
+                    // =========================
+
                     Output0Buffer.AddRow();
 
-                    // sensor_id (id → INT extraction)
-                    string rawId = item["id"] != null ? item["id"].ToString() : "0";
-                    Output0Buffer.sensorid = int.Parse(rawId.Replace("U", ""));
+                    if (!sensorId.StartsWith("U"))
+                    {
+                        continue; // Skip rows that don't follow the expected API format
+                    }
 
-                    // city (location cleanup)
-                    string city = item["location"] != null ? item["location"].ToString() : "";
-                    Output0Buffer.city = string.IsNullOrWhiteSpace(city) ? "Unknown" : city;
+                    int sensorIdInt;
+                    if (!int.TryParse(sensorId.Substring(1), out sensorIdInt))
+                    {
+                        continue; // Skip if the numeric part is invalid
+                    }
 
-                    // timestamp
-                    Output0Buffer.timestamp = item["timestamp"] != null
-                        ? DateTime.Parse(item["timestamp"].ToString())
-                        : DateTime.Now;
+                    // Later:
+                    Output0Buffer.sensorid = sensorIdInt; // stores 112 from "U112"
 
-                    // pm25 cleaning
-                    double pm25 = item["pm25"] != null ? Convert.ToDouble(item["pm25"]) : 0;
-                    Output0Buffer.pm25 = pm25 < 0 ? 0 : pm25;
 
-                    // pm10 cleaning
-                    double pm10 = item["pm10"] != null ? Convert.ToDouble(item["pm10"]) : 0;
-                    Output0Buffer.pm10 = pm10 < 0 ? 0 : pm10;
+                    Output0Buffer.city = city;
+                    Output0Buffer.timestamp = parsedTimestamp;
+                    Output0Buffer.pm25 = pm25;
+                    Output0Buffer.pm10 = pm10;
 
-                    // source column
+                    // Source column
                     Output0Buffer.source = "API";
                 }
             }
         }
         catch (Exception ex)
         {
-            // This will show the error in SSIS execution results
-            ComponentMetaData.FireError(0, "API Script", ex.Message, "", 0, out bool cancel);
-            throw;  // Remove this line if you want package to continue despite errors
+            bool cancel;
+
+            ComponentMetaData.FireError(
+                0,
+                "API Script",
+                ex.Message,
+                "",
+                0,
+                out cancel
+            );
+
+            throw;
         }
     }
 }]]></arrayElement>
@@ -2390,7 +2630,7 @@ namespace SC_62fb841fa56c4b0eb755f61c058b0218.Properties {
     <msb:CodeName>SC_62fb841fa56c4b0eb755f61c058b0218</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_62fb841fa56c4b0eb755f61c058b0218</msb:DisplayName>
-    <msb:ProjectId>{EFB398B3-7744-4633-B5DF-A36A298EA30D}</msb:ProjectId>
+    <msb:ProjectId>{0A1307BC-A103-4D5E-9FB3-DD6042759A21}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_62fb841fa56c4b0eb755f61c058b0218.csproj" />
@@ -2537,138 +2777,138 @@ namespace SC_62fb841fa56c4b0eb755f61c058b0218.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[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
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPoZ5WkAAAAAAAAAAOAAIiALATAAABwAAAAIAAAAAAAAyjsA
+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
-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
+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
-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
+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
-LnJlbG9jAAAMAAAAAGAAAAACAAAAJAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACs
-OwAAAAAAAEgAAAACAAUAGCUAAKgVAAABAAAAAAAAAMA6AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAABswBwA9AgAAAQAAESAADAAAKBAAAApyAQAAcCgRAAAKdCQA
+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
-AAoNOIoBAAASAygaAAAKEwQCewMAAARvEAAABhEEcp4AAHBvGwAACi0HcqQAAHArEREEcp4AAHBv
-GwAACm8cAAAKEwUCewMAAAQRBXKoAABwcqwAAHBvHQAACigeAAAKbwQAAAYRBHKuAABwbxsAAAot
-B3KsAABwKxERBHKuAABwbxsAAApvHAAAChMGAnsDAAAEEQYoHwAACi0EEQYrBXLAAABwbwYAAAYC
-ewMAAAQRBHLQAABwbxsAAAotByggAAAKKxYRBHLQAABwbxsAAApvHAAACighAAAKbwgAAAYRBHLk
-AABwbxsAAAotCyMAAAAAAAAAACsREQRy5AAAcG8bAAAKKCIAAAoTBwJ7AwAABBEHIwAAAAAAAAAA
-MgQRBysJIwAAAAAAAAAAbwoAAAYRBHLuAABwbxsAAAotCyMAAAAAAAAAACsREQRy7gAAcG8bAAAK
-KCIAAAoTCAJ7AwAABBEIIwAAAAAAAAAAMgQRCCsJIwAAAAAAAAAAbwwAAAYCewMAAARy+AAAcG8O
-AAAGEgMoIwAACjpq/v//3g4SA/4WAgAAG28kAAAK3N4KBywGB28kAAAK3N4KBiwGBm8kAAAK3N4k
-EwkCKCUAAAoWcgABAHARCW8mAAAKcqwAAHAWEgpvJwAACv4aKgAAAEFkAAACAAAAUwAAAJ0BAADw
-AQAADgAAAAAAAAACAAAAOwAAAMUBAAAAAgAACgAAAAAAAAACAAAALwAAAN0BAAAMAgAACgAAAAAA
-AAAAAAAAAAAAABgCAAAYAgAAJAAAABQAAAEeAigTAAAGKioCAwQFKCgAAAoqOgIWA4wqAAABKCkA
-AAoqWgMsCAIWKCoAAAoqchYBAHBzKwAACnomAhcDKCkAAAoqWgMsCAIXKCoAAAoqchYBAHBzKwAA
-Cno6AhgDjBgAAAEoKQAACipaAywIAhgoKgAACipyFgEAcHMrAAAKejoCGQOMLwAAASgpAAAKKloD
-LAgCGSgqAAAKKnIWAQBwcysAAAp6OgIaA4wvAAABKCkAAAoqWgMsCAIaKCoAAAoqchYBAHBzKwAA
-CnomAhsDKCkAAAoqWgMsCAIbKCoAAAoqchYBAHBzKwAACnoeAigsAAAKKh4CKC0AAAoqHgIoLgAA
-Cip+AigvAAAKAgJzGAAABn0BAAAEAgJzGQAABn0CAAAEKgYqbgJ7AwAABCwSAnsDAAAEbxEAAAYC
-FH0DAAAEKgATMAUASQAAAAIAABEWCisuBAaUDgRyswEAcCgwAAAKMxkCBQaaAgQGlCgxAAAKDgRz
-AwAABn0DAAAEBhdYCgYDMs4CbxcAAAYCbxQAAAYCKBUAAAYqOgIoMgAACgIDfQQAAAQqOgIoMgAA
-CgIDfQUAAAQqHgIoMgAACiqufgYAAAQtHnLFAQBw0AcAAAIoMwAACm80AAAKczUAAAqABgAABH4G
-AAAEKhp+BwAABCoeAoAHAAAEKhp+CAAABCoeAig2AAAKKi5zHwAABoAIAAAEKgAAAEJTSkIBAAEA
-AAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAIwHAAAjfgAA+AcAAPgIAAAjU3RyaW5ncwAAAADw
-EAAAOAIAACNVUwAoEwAAEAAAACNHVUlEAAAAOBMAAHACAAAjQmxvYgAAAAAAAAACAAABVxWiCQkJ
-AAAA+gEzABYAAAEAAAAyAAAACAAAAAgAAAAgAAAAFgAAADYAAAAQAAAAAgAAAAMAAAAPAAAAEAAA
-AAMAAAABAAAABgAAAAEAAAABAAAAAAAiBAEAAAAAAAYAJQPKBgYAuQPKBgYAcQK3Bg8APgcAAAYA
-ngJeBQYACANeBQYA6QJeBQYAoANeBQYARQNeBQYAXgNeBQYAtQJeBQYA0ALpAwoAeQN9AQ4A8wEH
-CAYA4AV/AAYAIwCoAEMAlQYAAAYAMACoAAYAAAj2BAYAgAX2BAoAFQZ9ARIABgZ9AQoAlgV9AQYA
-dAH2BAoASwh9AQYAVAK3BgYAJgbqBgYAigUpBQ4AJAIMBA4AhQIMBA4A2wEUBQYAOQLKBg4ANgYH
-CA4AngEHCA4AkAgHCA4AjAgHCA4A9wEHCAYA3QR/AAYA7QV/ABYAcwY+BQYABQT2BAYAKgD2BAYA
-hAj2BAYAOwH2BBoAAQBKBgYAcAX2BAYASQH2BAYArgH2BAYAUAH2BAYA5AheBQAAAABGAAAAAAAB
-AAEAAQAQAAkFAAAQAAEAAQABABAA+AUAAFUAAQADAAEAEAAtCAAAZQABABMAAQAQAMoHAABNAAQA
-GAABABAAfAcAAE0ABQAZAAAAEADxBk0HTQAGABoAAAEQAKsHTQd9AAgAHgAGAMoHLQEGAHwHMQEG
-APgFNQEBADsIOQEBADsIOQERAP0EPQERAMsBQQERABQBRQFQIAAAAADGAOwHBgABAAAjAAAAAIYY
-oAYGAAEACCMAAAAAhhigBtoAAQATIwAAAACGCNcAAQAEACIjAAAAAIYIagRJAQUAOSMAAAAAhgjt
-CBAABgBDIwAAAACGCKUESQEHAFojAAAAAIYI0gVOAQgAaSMAAAAAhgiQBEkBCQCAIwAAAACGCD0A
-VAEKAI8jAAAAAIYIWgRJAQsApiMAAAAAhggaAFQBDAC1IwAAAACGCEoESQENAMwjAAAAAIYIJAEQ
-AA4A1iMAAAAAhgh+BEkBDwDtIwAAAACGANkIBgAQAPUjAAAAAIYAEggGABAA/SMAAAAAhgAVCMUA
-EAAFJAAAAACGGKAGBgAQACUkAAAAAMYB3gcGABAAJyQAAAAAgQDDAAYAEABEJAAAAADGALwIWQEQ
-ACUkAAAAAMYB7AcGABQAmSQAAAAAhhigBmUBFACoJAAAAACGGKAGZQEVALckAAAAAIMYoAYGABYA
-vyQAAAAAkwgiBmsBFgDrJAAAAACTCLMBcAEWAPIkAAAAAJMIvwF1ARYA+iQAAAAAlgghCHsBFwAB
-JQAAAACGGKAGBgAXAAklAAAAAJEYpgaAARcAAAABABsGAAACAIYHAAADAKQFAAABANcDAAABANcD
-AAABANcDAAABANcDAAABANcDAAABANcDAAABANcDAAABANcDAAABANcDAAABANcDAAABANcDAAAB
-ANcDAAABAOQHAAACAK0GAAADANYHAAAEAKQFAAABAFEIAAABAFEIAAABANcDCQCgBgEAEQCgBgYA
-GQCgBgoAKQCgBhAAMQCgBhAAOQCgBhAAQQCgBhAASQCgBhAAUQCgBhAAWQCgBhAAYQCgBhAAaQCg
-BgYA0QCgBgYA8QCgBhUAAQGgBgYACQG9BDoAGQEdAkEAGQHuABAAGQEDAkgAKQHSBE4AeQCgBlQA
-OQHkAFsAQQGgBgYAQQHdA18ADACSBn4AFABbCJIAHADkBJ4AmQADBFsASQH5AKUAUQEXAqsASQEB
-AbAAwQDRCLUAwQAXAroAWQFHAcAAFADICMUAYQEPAgYAyQCJAMkAoQAvAVsAaQGIBs8AqQCgBtoA
-qQDtBOQAqQC1BAEAcQGgBhAAqQDZCAYAqQASCAYAqQAVCMUAyQCgBgYAyQBzAO4AyQCaB/UAmQCg
-BgYAgQFiAfsAgQHgCAQB2QCgBgoB+QCgBgYALgALAKgBLgATALEBLgAbANABLgAjANkBLgArAAIC
-LgAzAAICLgA7AAICLgBDANkBLgBLAAgCLgBTAAICLgBbAB8CQwBjAGkC4wBrAGkCAQF7AGkCqQFz
-ANAByQFzANABGwDqAAMAAQAHAA0ACAAPAAAA2wCEAQAAbgSIAQAA8QiMAQAAqQSIAQAA1gWQAQAA
-lASIAQAAQQCVAQAAXgSIAQAAHgCVAQAATgSIAQAAKAGMAQAAggSIAQAAJgaZAQAA0wGeAQAAJQij
-AQEABAADAAEABQAFAAEABgAHAAEABwAJAAEACAALAAEACQANAAEACgAPAAEACwARAAEADAATAAEA
-DQAVAAEADgAXAAEADwAZAAIAGwAbAAIAHAAdAAEAHQAdAAIAHgAfAHMAhwCXAASAAAABAAAAAAAA
-AAAAAAAAAE8AAAAEAAAAAAAAAAAAAAASAZ8AAAAAABEAAAAAAAAAAAAAABsBZwgAAAAABAAAAAAA
-AAAAAAAAEgH2BAAAAAARAAAAAAAAAAAAAAAbAZsIAAAAAAQAAAAAAAAAAAAAACQBtAcAAAAAEQAA
-AAAAAAAAAAAAGwGuBQAAAAAAAAAAAQAAAPsGAAAxAGYAAAAAAABJRFRTQ29tcG9uZW50TWV0YURh
-dGExMDAAc2V0X3BtMTAATGlzdGAxAEludDMyAERpY3Rpb25hcnlgMgBzZXRfcG0yNQA8TW9kdWxl
-PgBTQ182RDZDQkVCNTE5QTU0OTlBQUVDMjlCMDgxM0ZGNkEyQwBHZXRPdXRwdXRJRABTeXN0ZW0u
-SU8AZ2V0X0NvbXBvbmVudE1ldGFEYXRhAG1zY29ybGliAFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5l
-cmljAE1hcmtPdXRwdXRzRmluaXNoZWQAc2V0X3NlbnNvcmlkAFJlYWRUb0VuZABzZXRfTWV0aG9k
-AFJlcGxhY2UASXNOdWxsT3JXaGl0ZVNwYWNlAGRlZmF1bHRJbnN0YW5jZQBzZXRfc291cmNlAGdl
-dF9NZXNzYWdlAElEaXNwb3NhYmxlAFRvRG91YmxlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVG
-cm9tSGFuZGxlAERhdGVUaW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFNlY3Vy
-aXR5UHJvdG9jb2xUeXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBB
-cHBsaWNhdGlvblNldHRpbmdzQmFzZQBIdHRwV2ViUmVzcG9uc2UAR2V0UmVzcG9uc2UARGlzcG9z
-ZQBQYXJzZQBDcmVhdGUARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRy
-aWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVk
-aXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJh
-ZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3Vy
-YXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJl
-bGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHly
-aWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3Nl
-bWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAdmFsdWUA
-RGVzZXJpYWxpemUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBUb1N0cmluZwBTeXN0ZW0uQ29t
-cG9uZW50TW9kZWwAU0NfNkQ2Q0JFQjUxOUE1NDk5QUFFQzI5QjA4MTNGRjZBMkMuZGxsAHNldF9w
-bTEwX0lzTnVsbABzZXRfcG0yNV9Jc051bGwAc2V0X3NlbnNvcmlkX0lzTnVsbABzZXRfc291cmNl
-X0lzTnVsbABzZXRfdGltZXN0YW1wX0lzTnVsbABzZXRfY2l0eV9Jc051bGwAU2V0TnVsbABzZXRf
-U2VjdXJpdHlQcm90b2NvbABHZXRSZXNwb25zZVN0cmVhbQBnZXRfSXRlbQBzZXRfSXRlbQBTeXN0
-ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xv
-YmFsaXphdGlvbgBTeXN0ZW0uV2ViLlNjcmlwdC5TZXJpYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0
-aW9uAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AQ3VsdHVyZUluZm8AT3V0cHV0TmFtZU1hcABP
-dXRwdXRNYXAATWljcm9zb2Z0LlNxbFNlcnZlci5EVFNQaXBlbGluZVdyYXAAc2V0X3RpbWVzdGFt
-cABTdHJlYW1SZWFkZXIAVGV4dFJlYWRlcgBPdXRwdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVyAFNj
-cmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAFNlcnZpY2VQb2ludE1hbmFnZXIATWljcm9z
-b2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUuV3JhcHBlcgBKYXZhU2NyaXB0U2VyaWFsaXplcgBG
-aXJlRXJyb3IAR2V0RW51bWVyYXRvcgAuY3RvcgAuY2N0b3IAT3V0cHV0SURzAFN5c3RlbS5EaWFn
-bm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMA
-U0NfNjJmYjg0MWZhNTZjNGIwZWI3NTVmNjFjMDU4YjAyMTguUHJvcGVydGllcy5SZXNvdXJjZXMu
-cmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDXzYyZmI4NDFmYTU2YzRiMGViNzU1ZjYxYzA1OGIw
-MjE4LlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5k
-ZXhlcwBTZXR0aW5ncwBTeXN0ZW0uV2ViLkV4dGVuc2lvbnMAQ29ubmVjdGlvbnMAQnVmZmVycwBG
-aW5pc2hPdXRwdXRzAENyZWF0ZU5ld091dHB1dFJvd3MAT2JqZWN0AFN5c3RlbS5OZXQAU2V0RW5k
-T2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0
-Q29tcG9uZW50AGdldF9DdXJyZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQAQ29udmVy
-dABIdHRwV2ViUmVxdWVzdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABQcmltZU91
-dHB1dABNb3ZlTmV4dABnZXRfTm93AEFkZFJvdwBnZXRfQXNzZW1ibHkAc2V0X2NpdHkAAAAAgJNo
-AHQAdABwAHMAOgAvAC8ANgA5AGIAZQAwADgAYwA5ADEANwBjADMAZAA3AGQAOQA3ADcAOQAxADAA
-ZgA0AGUALgBtAG8AYwBrAGEAcABpAC4AaQBvAC8AdQBzAF8AYQBpAHIAXwBxAHUAYQBsAGkAdAB5
-AC8AYQBpAHIAXwBtAG8AbgBpAHQAbwByAGkAbgBnAAAHRwBFAFQAAAVpAGQAAAMwAAADVQAAAQAR
-bABvAGMAYQB0AGkAbwBuAAAPVQBuAGsAbgBvAHcAbgAAE3QAaQBtAGUAcwB0AGEAbQBwAAAJcABt
-ADIANQAACXAAbQAxADAAAAdBAFAASQAAFUEAUABJACAAUwBjAHIAaQBwAHQAAICbSQBzAE4AdQBs
-AGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAA
-RgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAg
-AGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAAARTwB1AHQAcAB1AHQAIAAwAABxUwBDAF8A
-NgAyAGYAYgA4ADQAMQBmAGEANQA2AGMANABiADAAZQBiADcANQA1AGYANgAxAGMAMAA1ADgAYgAw
-ADIAMQA4AC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAtozvlHhe
-eUSMacwR2DL4mwAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERdR4HCxI5Ej0OFRFFARUSSQIOHBUS
-SQIOHA4ODQ0SUQIGAAEBEYCJBgABEoCNDgUgABKAlQUgABKAmQYgAQESgJkDIAAOBjABAR4ADgwK
-ARUSQQEVEkkCDhwKFRJBARUSSQIOHAggABURRQETAAoVEUUBFRJJAg4cBCAAEwAGFRJJAg4cBiAB
-EwETAAUgAg4ODgQAAQgOBAABAg4EAAARYQUAARFhDgQAAQ0cAyAAAgUgABKAtQogBgEIDg4OCBAC
-CSADARJZHQgSXQUgAgEIHAMHAQgGAAIIEl0OBSABHQgICAABEoDBEYDFBSAAEoDJByACAQ4SgMkI
-t3pcVhk04IkIiYRdzYCAzJEIMb84Vq02TjUDBhIUAwYSGAMGEgwDBhJlAwYSbQMGEnEDBhIgBCAB
-AQIFIAEBEWEEIAEBDQsgBAEIHQgdElkSXQUgAQESZQQAABJtBAAAEnEFAAEBEnEEAAASIAMAAAED
-KAAIAygAAgMoAA4EKAARYQMoAA0ECAASbQQIABJxBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBO
-b25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzYyZmI4NDFmYTU2YzRiMGViNzU1ZjYx
-YzA1OGIwMjE4AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjYAAEkBABouTkVURnJhbWV3b3Jr
-LFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43
-BAEAAAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwg
-bXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tl
-bj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAA
-AAAAAAAAAAAAUEFEUEFEULQAAACgOwAAAAAAAAAAAAC6OwAAACAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAArDsAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAA
+AAoNOJ8BAAASAygaAAAKEwQRBHKeAABwbxsAAAo5hQEAABEEcqQAAHBvGwAACjl0AQAAEQRytgAA
+cG8bAAAKOWMBAAARBHLKAABwbxsAAAo5UgEAABEEctQAAHBvGwAACjlBAQAAEQRyngAAcG8bAAAK
+bxwAAAoTBREEcqQAAHBvGwAACm8cAAAKEwYRBHK2AABwbxsAAApvHAAAChMHEQUoHQAACjr8AAAA
+EQYoHQAACjrwAAAAEQcoHQAACjrkAAAAEQUTCBEHEgkoHgAACjnSAAAAEQRyygAAcG8bAAAKbxwA
+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
+EAARJAAAAACGACMIzwAQABkkAAAAAIYYrgYGABAAOSQAAAAAxgHsBwYAEAA7JAAAAACBAMMABgAQ
+AFgkAAAAAMYAwghjARAAOSQAAAAAxgH6BwYAFACtJAAAAACGGK4GbwEUALwkAAAAAIYYrgZvARUA
+yyQAAAAAgxiuBgYAFgDTJAAAAACTCDAGdQEWAP8kAAAAAJMIqQF6ARYABiUAAAAAkwi1AX8BFgAO
+JQAAAACWCC8IhQEXABUlAAAAAIYYrgYGABcAHSUAAAAAkRi0BooBFwAAAAEAKQYAAAIAlAcAAAMA
+sgUAAAEA0AMAAAEA0AMAAAEA0AMAAAEA0AMAAAEA0AMAAAEA0AMAAAEA0AMAAAEA0AMAAAEA0AMA
+AAEA0AMAAAEA0AMAAAEA0AMAAAEA8gcAAAIAuwYAAAMA5AcAAAQAsgUAAAEAXwgAAAEAXwgAAAEA
+0AMJAK4GAQARAK4GBgAZAK4GCgApAK4GEAAxAK4GEAA5AK4GEABBAK4GEABJAK4GEABRAK4GEABZ
+AK4GEABhAK4GEABpAK4GBgDRAK4GBgDxAK4GFQABAa4GBgAJAcsEPwAZARYCRgAZAe4AEAAZAfkB
+TQApAeAEUwB5AK4GWQA5AeQAYABBAa4GBgBBAdYDZAAMAKAGgwAUAGkIlwAcAPIEowCZAPwDYABJ
+AfkAqgChAA0CrwBRAQ0CtwBJAQ8EvgBJAQUEwwBZAQ0CyAAUAM4IzwBhAQUCBgDJAIkA0wCpACcB
+YABpAZYG2QCxAK4G5ACxAPsE7gCxAMMEAQBxAa4GEACxANcIBgCxACAIBgCxACMIzwDJAK4GBgDJ
+AHMA+ADJAKgH/wCZAK4GBgB5AVgBBQF5Ad4IDgHZAK4GFAH5AK4GBgAuAAsAsgEuABMAuwEuABsA
+2gEuACMA4wEuACsADAIuADMADAIuADsADAIuAEMA4wEuAEsAEgIuAFMADAIuAFsAKQJDAGMAcwLj
+AGsAcwIBAXsAcwKpAXMA2gHJAXMA2gEbAPQAAwABAAcADQAIAA8AAADbAI4BAAB8BJIBAADvCJYB
+AAC3BJIBAADkBZoBAACiBJIBAABBAJ8BAABsBJIBAAAeAJ8BAABcBJIBAAAgAZYBAACQBJIBAAA0
+BqMBAADJAagBAAAzCK0BAQAEAAMAAQAFAAUAAQAGAAcAAQAHAAkAAQAIAAsAAQAJAA0AAQAKAA8A
+AQALABEAAQAMABMAAQANABUAAQAOABcAAQAPABkAAgAbABsAAgAcAB0AAQAdAB0AAgAeAB8AeACM
+AJwABIAAAAEAAAAAAAAAAAAAAAAATwAAAAQAAAAAAAAAAAAAABwBnwAAAAAAEQAAAAAAAAAAAAAA
+JQF1CAAAAAAEAAAAAAAAAAAAAAAcAQQFAAAAABEAAAAAAAAAAAAAACUBoQgAAAAABAAAAAAAAAAA
+AAAALgHCBwAAAAARAAAAAAAAAAAAAAAlAbwFAAAAAAAAAAABAAAACQcAADEAawAAAABJRFRTQ29t
+cG9uZW50TWV0YURhdGExMDAAc2V0X3BtMTAATGlzdGAxAEludDMyAERpY3Rpb25hcnlgMgBzZXRf
+cG0yNQA8TW9kdWxlPgBTQ182RDZDQkVCNTE5QTU0OTlBQUVDMjlCMDgxM0ZGNkEyQwBHZXRPdXRw
+dXRJRABTeXN0ZW0uSU8AZ2V0X0NvbXBvbmVudE1ldGFEYXRhAG1zY29ybGliAFN5c3RlbS5Db2xs
+ZWN0aW9ucy5HZW5lcmljAE1hcmtPdXRwdXRzRmluaXNoZWQAc2V0X3NlbnNvcmlkAFJlYWRUb0Vu
+ZABzZXRfTWV0aG9kAElzTnVsbE9yV2hpdGVTcGFjZQBkZWZhdWx0SW5zdGFuY2UAc2V0X3NvdXJj
+ZQBnZXRfTWVzc2FnZQBJRGlzcG9zYWJsZQBEb3VibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlw
+ZUZyb21IYW5kbGUARGF0ZVRpbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAU2Vj
+dXJpdHlQcm90b2NvbFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJl
+AEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEh0dHBXZWJSZXNwb25zZQBHZXRSZXNwb25zZQBEaXNw
+b3NlAFRyeVBhcnNlAENyZWF0ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRl
+ZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1
+dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1i
+bHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29u
+ZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0
+aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5
+Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmlidXRl
+AEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQB2
+YWx1ZQBEZXNlcmlhbGl6ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRvU3RyaW5nAFN1YnN0
+cmluZwBTdGFydHNXaXRoAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ182RDZDQkVCNTE5QTU0OTlB
+QUVDMjlCMDgxM0ZGNkEyQy5kbGwAc2V0X3BtMTBfSXNOdWxsAHNldF9wbTI1X0lzTnVsbABzZXRf
+c2Vuc29yaWRfSXNOdWxsAHNldF9zb3VyY2VfSXNOdWxsAHNldF90aW1lc3RhbXBfSXNOdWxsAHNl
+dF9jaXR5X0lzTnVsbABTZXROdWxsAHNldF9TZWN1cml0eVByb3RvY29sAEdldFJlc3BvbnNlU3Ry
+ZWFtAGdldF9JdGVtAHNldF9JdGVtAFN5c3RlbQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3Rl
+bS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5XZWIuU2NyaXB0LlNl
+cmlhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBD
+dWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABNaWNyb3NvZnQuU3FsU2VydmVyLkRU
+U1BpcGVsaW5lV3JhcABzZXRfdGltZXN0YW1wAFN0cmVhbVJlYWRlcgBUZXh0UmVhZGVyAE91dHB1
+dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIA
+U2VydmljZVBvaW50TWFuYWdlcgBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGluZS5XcmFw
+cGVyAEphdmFTY3JpcHRTZXJpYWxpemVyAEZpcmVFcnJvcgBHZXRFbnVtZXJhdG9yAC5jdG9yAC5j
+Y3RvcgBPdXRwdXRJRHMAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVy
+U2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ182MmZiODQxZmE1NmM0YjBlYjc1NWY2MWMwNThi
+MDIxOC5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNjJm
+Yjg0MWZhNTZjNGIwZWI3NTVmNjFjMDU4YjAyMTguUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVy
+Q29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzAFN5c3RlbS5XZWIuRXh0ZW5z
+aW9ucwBDb25uZWN0aW9ucwBCdWZmZXJzAEZpbmlzaE91dHB1dHMAQ3JlYXRlTmV3T3V0cHV0Um93
+cwBPYmplY3QAU3lzdGVtLk5ldABTZXRFbmRPZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29tcG9u
+ZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQAZ2V0X0N1cnJlbnQATWljcm9zb2Z0
+LlNxbFNlcnZlci5UeFNjcmlwdABIdHRwV2ViUmVxdWVzdABNaWNyb3NvZnQuU3FsU2VydmVyLlBp
+cGVsaW5lSG9zdABQcmltZU91dHB1dABNb3ZlTmV4dABBZGRSb3cAZ2V0X0Fzc2VtYmx5AHNldF9j
+aXR5AACAk2gAdAB0AHAAcwA6AC8ALwA2ADkAYgBlADAAOABjADkAMQA3AGMAMwBkADcAZAA5ADcA
+NwA5ADEAMABmADQAZQAuAG0AbwBjAGsAYQBwAGkALgBpAG8ALwB1AHMAXwBhAGkAcgBfAHEAdQBh
+AGwAaQB0AHkALwBhAGkAcgBfAG0AbwBuAGkAdABvAHIAaQBuAGcAAAdHAEUAVAAABWkAZAAAEWwA
+bwBjAGEAdABpAG8AbgAAE3QAaQBtAGUAcwB0AGEAbQBwAAAJcABtADIANQAACXAAbQAxADAAAANV
+AAAHQQBQAEkAABVBAFAASQAgAFMAYwByAGkAcAB0AAABAICbSQBzAE4AdQBsAGwAIABwAHIAbwBw
+AGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4A
+IABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBu
+ACAAaQBuAHMAdABlAGEAZAAuAAARTwB1AHQAcAB1AHQAIAAwAABxUwBDAF8ANgAyAGYAYgA4ADQA
+MQBmAGEANQA2AGMANABiADAAZQBiADcANQA1AGYANgAxAGMAMAA1ADgAYgAwADIAMQA4AC4AUABy
+AG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAPzi2pRj91EWb5n0JpeLkuQAE
+IAEBCAMgAAEFIAEBEREEIAEBDgUgAQERdSMHDxI5Ej0OFRFFARUSSQIOHBUSSQIOHA4ODg4RUQ0N
+CBJVAgYAAQERgIkGAAESgI0OBSAAEoCVBSAAEoCZBiABARKAmQMgAA4GMAEBHgAODAoBFRJBARUS
+SQIOHAoVEkEBFRJJAg4cCCAAFRFFARMAChURRQEVEkkCDhwEIAATAAYVEkkCDhwGIAETARMABAAB
+Ag4HAAICDhARUQYAAgIOEA0EIAECDgQgAQ4IBgACAg4QCAMgAAIFIAASgLUKIAYBCA4ODggQAgkg
+AwESXR0IEmEFIAIBCBwDBwEIBgACCBJhDgUgAR0ICAgAARKAvRGAwQUgABKAxQcgAgEOEoDFCLd6
+XFYZNOCJCImEXc2AgMyRCDG/OFatNk41AwYSFAMGEhgDBhIMAwYSZQMGEm0DBhJxAwYSIAQgAQEC
+BSABARFRBCABAQ0LIAQBCB0IHRJdEmEFIAEBEmUEAAASbQQAABJxBQABARJxBAAAEiADAAABAygA
+CAMoAAIDKAAOBCgAEVEDKAANBAgAEm0ECAAScQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9u
+RXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ182MmZiODQxZmE1NmM0YjBlYjc1NWY2MWMw
+NThiMDIxOAAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDI2AABJAQAaLk5FVEZyYW1ld29yayxW
+ZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNwQB
+AAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2Nv
+cmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3
+N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAA
+AAAAAABQQURQQURQtAAAAJw7AAAAAAAAAAAAALY7AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAACo
+OwAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
 ABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAA
 WEAAAOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9
@@ -2696,7 +2936,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAADMOwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAADIOwAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -3033,27 +3273,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output1]"
-              endId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion 1.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output2]"
               endId="Package\Data Flow Task\OLE DB Destination 1 1.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion 2.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output2]"
+              endId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion 1.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
               endId="Package\Data Flow Task\Data Conversion 2.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Derived Column 1 1.Outputs[Derived Column Output]" />
             <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
               refId="Package\Data Flow Task.Paths[Derived Column Output2]"
-              endId="Package\Data Flow Task\Data Conversion 1.Inputs[Data Conversion Input]"
+              endId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output]" />
             <path
@@ -3071,6 +3311,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="Record"
               startId="Package\Data Flow Task\XML Source.Outputs[Record]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Valid Row]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Valid Row"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[Valid Row]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Valid Row1]"
+              endId="Package\Data Flow Task\Data Conversion 1.Inputs[Data Conversion Input]"
+              name="Valid Row"
+              startId="Package\Data Flow Task\Conditional Split 1.Outputs[Valid Row]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -3099,15 +3349,51 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="116.8,41.6"
+          Id="Package\Data Flow Task\CSV File"
+          TopLeft="60,161.6" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="933.673471314479,63.4285713960142" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="717.369615911839,55.0334269755373" />
         <NodeLayout
           Size="133.6,41.6"
           Id="Package\Data Flow Task\XML Source"
           TopLeft="60,60" />
         <NodeLayout
-          Size="116.8,41.6"
-          Id="Package\Data Flow Task\CSV File"
-          TopLeft="60,161.6" />
+          Size="179.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination 1"
+          TopLeft="921.22449162924,139.177967785885" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Data Flow Task\Derived Column 1 1"
+          TopLeft="239.761905144571,263.712421369182" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Data Flow Task\Data Conversion 1"
+          TopLeft="722.500001410288,145.265686466941" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Data Flow Task\Conditional Split 1"
+          TopLeft="475.178572312378,164.577127427487" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination 1 1"
+          TopLeft="925.306124290989,244.051917273791" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Data Flow Task\Derived Column 1"
+          TopLeft="249.795918771372,157.965266287742" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Data Flow Task\Data Conversion 2"
+          TopLeft="671.823242373754,256.466666761625" />
         <NodeLayout
           Size="122.4,41.6"
           Id="Package\Data Flow Task\REST API"
@@ -3116,6 +3402,104 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Size="152.8,41.6"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="243.673469778748,60.0100843007736" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Data Flow Task\Conditional Split"
+          TopLeft="464.002268561435,59.5014005080688" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="872.569615911839,75.8334269755373">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61.10385540264,8.3951444204769"
+              Start="0,0"
+              End="53.60385540264,8.3951444204769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.55192770132,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.55192770132,0"
+                    Point2="30.55192770132,0"
+                    Point3="30.55192770132,4" />
+                  <mssgle:LineSegment
+                    End="30.55192770132,4.3951444204769" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.55192770132,4.3951444204769"
+                    Point2="30.55192770132,8.3951444204769"
+                    Point3="34.55192770132,8.3951444204769" />
+                  <mssgle:LineSegment
+                    End="53.60385540264,8.3951444204769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Valid Row1]"
+          TopLeft="638.378572312378,185.377127427487">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.1214290979107,-19.3114409605466"
+              Start="0,0"
+              End="76.6214290979107,-19.3114409605466">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.0607145489553,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.0607145489553,0"
+                    Point2="42.0607145489553,0"
+                    Point3="42.0607145489553,-4" />
+                  <mssgle:LineSegment
+                    End="42.0607145489553,-15.3114409605466" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.0607145489553,-15.3114409605466"
+                    Point2="42.0607145489553,-19.3114409605466"
+                    Point3="46.0607145489553,-19.3114409605466" />
+                  <mssgle:LineSegment
+                    End="76.6214290979107,-19.3114409605466" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="19.3534879864553,1,45.414453125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Valid Row]"
+          TopLeft="618.402268561435,78.0674137418031">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98.9673473504041,0"
+              Start="0,0"
+              End="91.4673473504041,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="91.4673473504041,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="23.026447112702,5,45.414453125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Record]"
           TopLeft="193.6,80.8050421503868">
@@ -3130,104 +3514,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="42.5734697787478,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="518.163266281432,46.9008406147854" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="396.473469778748,80.8100843007736">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="121.689796502684,-13.1092436859882"
-              Start="0,0"
-              End="114.189796502684,-13.1092436859882">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="56.844898251342,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="56.844898251342,0"
-                    Point2="60.844898251342,0"
-                    Point3="60.844898251342,-4" />
-                  <mssgle:LineSegment
-                    End="60.844898251342,-9.10924368598823" />
-                  <mssgle:CubicBezierSegment
-                    Point1="60.844898251342,-9.10924368598823"
-                    Point2="60.844898251342,-13.1092436859882"
-                    Point3="64.844898251342,-13.1092436859882" />
-                  <mssgle:LineSegment
-                    End="114.189796502684,-13.1092436859882" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Data Flow Task\Derived Column 1"
-          TopLeft="260.000000425747,155.780392340077" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="176.8,179.490196170038">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="83.2000004257474,0"
-              Start="0,0"
-              End="75.7000004257474,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="75.7000004257474,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion 1"
-          TopLeft="463.571429430526,155.780392340077" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Data Flow Task\Derived Column 1 1"
-          TopLeft="239.761905144571,263.712421369182" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion 2"
-          TopLeft="428.966098999632,260.290196170038" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="402.161905144571,282.80130876961">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="26.8041938550614,0"
-              Start="0,0"
-              End="19.3041938550614,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="19.3041938550614,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3259,19 +3545,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="176.8,180.582633143871">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72.9959187713721,0"
+              Start="0,0"
+              End="65.4959187713721,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="65.4959187713721,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output2]"
-          TopLeft="422.400000425747,176.580392340077">
+          TopLeft="412.195918771372,182.071196857614">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="41.1714290047788,0"
+              EndConnector="62.9826535410056,0"
               Start="0,0"
-              End="33.6714290047788,0">
+              End="55.4826535410056,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="33.6714290047788,0" />
+                    End="55.4826535410056,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3280,24 +3588,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="719.387756633428,52.5042016576907" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="673.363266281432,70.5025211362381">
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
+          TopLeft="396.473469778748,80.5557424044212">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="46.0244903519966,0"
+              EndConnector="67.528798782687,0"
               Start="0,0"
-              End="38.5244903519966,0">
+              End="60.028798782687,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="38.5244903519966,0" />
+                    End="60.028798782687,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3306,24 +3610,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination 1"
-          TopLeft="691.632654405805,156.656959367203" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output1]"
-          TopLeft="628.371429430526,177.01867585364">
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="402.161905144571,280.889544065403">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="63.2612249752785,0"
+              EndConnector="269.661337229183,0"
               Start="0,0"
-              End="55.7612249752785,0">
+              End="262.161337229183,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="55.7612249752785,0" />
+                    End="262.161337229183,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3332,24 +3632,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination 1 1"
-          TopLeft="672.244899262492,256.068723985947" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output2]"
-          TopLeft="593.766098999632,278.979460077993">
+          TopLeft="887.300001410288,163.021827126413">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="78.4788002628605,0"
+              EndConnector="33.9244902189516,0"
               Start="0,0"
-              End="70.9788002628605,0">
+              End="26.4244902189516,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="70.9788002628605,0" />
+                    End="26.4244902189516,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output1]"
+          TopLeft="836.623242373754,277.266666761625">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="88.6828819172349,-12.4147494878336"
+              Start="0,0"
+              End="81.1828819172349,-12.4147494878336">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40.3414409586175,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.3414409586175,0"
+                    Point2="44.3414409586175,0"
+                    Point3="44.3414409586175,-4" />
+                  <mssgle:LineSegment
+                    End="44.3414409586175,-8.4147494878336" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.3414409586175,-8.4147494878336"
+                    Point2="44.3414409586175,-12.4147494878336"
+                    Point3="48.3414409586175,-12.4147494878336" />
+                  <mssgle:LineSegment
+                    End="81.1828819172349,-12.4147494878336" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
